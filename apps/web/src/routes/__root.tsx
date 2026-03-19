@@ -104,6 +104,11 @@ export const Route = createRootRouteWithContext<RouterAppContext>()({
         href: appCss,
       },
       {
+        rel: "icon",
+        type: "image/png",
+        href: "/favicon.png",
+      },
+      {
         rel: "canonical",
         href: siteUrl,
       },
@@ -118,6 +123,11 @@ function RootDocument() {
     <html lang="en" className="dark">
       <head>
         <HeadContent />
+        <script
+          defer
+          src="https://l.claudeday.dev/script.js"
+          data-website-id="8eb3d49b-fd63-4cbc-b3b4-d34655954109"
+        />
       </head>
       <body>
         <Outlet />

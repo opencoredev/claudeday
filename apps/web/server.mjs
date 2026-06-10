@@ -8,7 +8,7 @@ import handler from "./dist/server/server.js";
 
 const rootDir = fileURLToPath(new URL(".", import.meta.url));
 const clientDir = resolve(rootDir, "dist/client");
-const port = Number.parseInt(process.env.PORT ?? "8080", 10);
+const port = Number.parseInt(process.env.PORT ?? "3000", 10);
 const host = process.env.HOST ?? "0.0.0.0";
 
 const mimeTypes = {

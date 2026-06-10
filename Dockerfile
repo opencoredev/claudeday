@@ -25,6 +25,8 @@ WORKDIR /app/apps/web
 
 RUN addgroup -S app && adduser -S app -G app
 
+COPY --from=deps /app/node_modules /app/node_modules
+COPY --from=deps /app/apps/web/node_modules ./node_modules
 COPY --from=builder /app/apps/web/dist ./dist
 COPY --from=builder /app/apps/web/server.mjs ./server.mjs
 
